@@ -1,0 +1,131 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 128px);
+  grid-template-rows: repeat(3, 128px);
+  gap: 1em;
+  padding: 1em;
+  border-radius: 8px;
+  background-color: #1a1a1a;
+  align-content: center;
+  justify-content: center;
+}
+
+main > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid ;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.turn{
+  color:#646cff;
+}
+
+
+.result-container {
+  grid-column: 1 / span 3;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.result-container h2 {
+  margin: 0;
+}
+.winner{
+  color: #646cff;
+}
+
+.scoreboard{
+  position: absolute;
+  width: 320px;
+  display: grid;
+  grid-auto-flow: column;
+  margin-top: 5px;
+  top: 30px;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  padding: 5px;
+  font-weight: bold;
+  /* background-color: #4392F1; */
+  left: 0px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+}
+
+@media (width < 470px ) {
+  main{
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+  }
+  .scoreboard{
+    left: auto;
+    font-size: 1.5em;
+  }
+}
