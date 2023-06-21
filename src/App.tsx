@@ -48,6 +48,7 @@ const App: React.FC = () => {
     setWinner(null)
     setIsGameDraw(false)
     setIsGameOver(false)
+    setTurn('X');
     setGrid(GRID.map(() => ''))
   }
 

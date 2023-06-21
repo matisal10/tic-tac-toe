@@ -92,7 +92,7 @@ button:focus-visible {
   display: grid;
   grid-auto-flow: column;
   margin-top: 5px;
-  top: 30px;
+  top: 2px;
   color: white;
   text-align: center;
   font-size: 2em;
@@ -101,6 +101,8 @@ button:focus-visible {
   /* background-color: #4392F1; */
   left: 0px;
 }
+
+
 
 
 @media (prefers-color-scheme: light) {
@@ -127,5 +129,6 @@ button:focus-visible {
   .scoreboard{
     left: auto;
     font-size: 1.5em;
+    top: 10px;
   }
 }
